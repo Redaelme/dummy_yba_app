@@ -1,20 +1,20 @@
 # yesboss
 
-## Architecture du projet
+## Project Architecture
 
-Le projet est decoupé en 2 parties principales
+The project is divided into 2 main parts:
 
 - **server**
 - **client**
 
-Le client lui aussi est divisé en 2 parties
+The client is also divided into 2 parts:
 
 - **mobile**
 - **web**
 
 ## Prerequisites
 
-- Node version _14.X.X_
+- Node version _20.17.0_
 - Yarn
 - Docker
 
@@ -22,77 +22,79 @@ Le client lui aussi est divisé en 2 parties
 
 #### Mobile
 
-Dans le dossier `client/mobile`:
+In the `client/mobile` folder:
 
-Il faut copier le contenu du fichier env.example dans un fichier .env
+You need to copy the content of the `env.example` file into a `.env` file.
 
-Après si c'est pour la première fois que vous alliez lancer le projet,
+If this is the first time you are launching the project,
 
-vous devez faire un `yarn install`.
+you need to run `yarn install`.
 
-Puis vous exécuter la commande `yarn start` pour lancer le serveur metro.
+Then, go to the `ios` folder and run the command `pod install`.
 
-Après dans un autre terminal vous faite la commande `yarn android` pour
+Next, run the command `yarn start` to start the Metro server.
 
-lancer l'application sur votre smartphone android.
+After that, in another terminal, run the command `yarn ios` to
+
+launch the application on your iOS smartphone.
 
 #### Web
 
-Dans le dossier `client/Web/yesboss`:
+In the `client/Web/yesboss` folder:
 
-Il faut copier le contenu du fichier env.staging dans un fichier .env
+You need to copy the content of the `env.staging` file into a `.env` file.
 
-Après si c'est pour la première fois que vous alliez lancer le projet,
+If this is the first time you are launching the project,
 
-vous devez faire un `yarn install`.
+you need to run `yarn install`.
 
-Puis pour lancer l'application web vous exécuter tout simplement la commande `yarn start`.
+Then, to launch the web application, simply run the command `yarn start`.
 
 ### BACK
 
-Dans `server`:
+In the `server` folder:
 
-Il faut copier le fichier .env.example danns un fichier .env
+You need to copy the `env.example` file into a `.env` file.
 
-Ensuite, builder les containers docker :
+Then, build the Docker containers:
 
     docker-compose build
 
-Ensuite pour demarrer l'app, il faut lancer la commande
+To start the app, run the command:
 
     docker-compose up -d
 
-### Pour tout réinitialiser
+### To reset everything
 
     docker-compose rm -sf
     docker-compose build api graphql
     docker-compose up -d
 
-### Pour les logs à l'intérieur du conteneur graphql
+### For logs inside the graphql container
 
     docker-compose logs -f graphql
 
 ### MIGRATION
 
-# Créer mais ne pas appliquer la migration en dev (s'assurer que le conteneur postgres est en marche)
+# Create but do not apply the migration in dev (make sure the postgres container is running)
 
     yarn migrate:create
 
-# Pour créer && appliquer la migration en dev (Assurez-vous que tous les conteneurs sont en marche)
+# To create & apply the migration in dev (make sure all containers are running)
 
     yarn migrate:dev
 
-# Pour amorcer les données (s'assurer que tous les conteneurs sont en marche)
+# To seed the data (make sure all containers are running)
 
     yarn seed
 
-# Migration sur la production
+# Migration in production
 
     yarn migrate
 
 ##### OUTLOOK
 
-Pour les changements d'environnement modifier la valeur de:
+For environment changes, modify the value of:
 
 - `OUTLOOK_ADMIN_EMAIL`
 - `OUTLOOK_ADMIN_PASSWORD`
@@ -101,12 +103,12 @@ Pour les changements d'environnement modifier la valeur de:
 - `OAUTH_APP_SECRET`
 - `OAUTH_AUTHORITY`
 
-dans votre fichier server/graphql/.env et modifiez la valeur de
+in your `server/graphql/.env` file and modify the value of
 
-`OUTLOOK_APP_ID` dans votre fichier client/mobile/.env avec la valeur appropriée.
+`OUTLOOK_APP_ID` in your `client/mobile/.env` file with the appropriate value.
 
 ##### GOOGLE
 
-Pour les changements d'environnement remplacer le contenu du fichier `server/graphql/services-accounts.json`
+For environment changes, replace the content of the `server/graphql/services-accounts.json` file
 
-par le votre.
+with your own.
