@@ -1,0 +1,26 @@
+import { objectType } from 'nexus';
+
+export const OutlookEmail = objectType({
+  name: 'OutlookEmail',
+  definition: (t) => {
+    t.nonNull.boolean('isRead');
+    t.nonNull.string('bodyPreview');
+    t.nonNull.string('id');
+    t.field('sender', {
+      type: 'OutlookEmailAdress',
+      // resolve:()
+    });
+    t.list.field('toRecipients', {
+      type: 'OutlookEmailAdress',
+    });
+    t.nonNull.string('subject');
+  },
+});
+
+export const OutlookEmailAddress = objectType({
+  name: 'OutlookEmailAdress',
+  definition: (t) => {
+    t.string('name');
+    t.string('address');
+  },
+});

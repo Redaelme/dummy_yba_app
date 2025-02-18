@@ -1,0 +1,346 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum RoleEnum {
+  ADMIN
+  USER
+}
+
+enum TypeEnum {
+  OUT
+  IN
+  BOOKING
+}
+
+enum MailService {
+  GOOGLE
+  MICROSOFT
+}
+
+enum CalendarTypes {
+  APPLE_CALENDAR
+  GOOGLE
+}
+
+enum SheduleStatus {
+  PENDING
+  ACCEPTED
+  POSTPONED
+  RESCHEDULING_PENDING
+  CANCELED
+}
+
+model User {
+  id                     String                   @id @default(uuid())
+  email                  String?                  @unique
+  firstName              String?
+  lastName               String?
+  lang                   String?
+  timezone               String?
+  displayName            String?
+  password               String?
+  avatar                 String?
+  company                String?
+  role                   RoleEnum                 @default(USER)
+  updatedAt              DateTime                 @updatedAt
+  createdAt              DateTime                 @default(now())
+  isBanned               Boolean                  @default(false)
+  isRemoved              Boolean                  @default(false)
+  mailService            MailService?             @default(GOOGLE)
+  calendarType           CalendarTypes?           @default(GOOGLE)
+  BookingLink            BookingLink[]
+  OAuth                  OAuth[]
+  Shedule                Shedule[]
+  Notification           Notification[]
+  Address                Address[]
+  Preference             Preference[]
+  EmailSubscription      EmailSubscription[]
+  IncomingRequest        IncomingRequest[]
+  IncomingMeetingRequest IncomingMeetingRequest[]
+  Task                   Task[]
+  signupCompleted        Boolean                  @default(false)
+  isSingupBO             Boolean                  @default(false)
+  isActive               Boolean                  @default(false)
+  modeFree               Boolean                  @default(false)
+  beginModeFree          DateTime?
+  isPayed                Boolean                  @default(false)
+  oauthStatus            String                   @default("ACTIVE")
+}
+
+model BookingLink {
+  id                 String   @id @default(uuid())
+  language           String
+  link               String   @unique
+  duration           Int
+  expirationDuration Int
+  level              String
+  bookingTimes       Json
+  userId             String
+  user               User     @relation(fields: [userId], references: [id])
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  @@map("BookingLink")
+}
+
+model BookingSchedule {
+  id           String   @id @default(uuid())
+  language     String?
+  name         String?
+  email        String
+  participants Json?
+  title        String
+  note         String?
+  rescheduleId String
+  link         String
+  duration     Int
+  scheduleId   String   @unique
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  Shedule Shedule @relation(fields: [scheduleId], references: [id])
+
+  @@map("BookingSchedule")
+}
+
+model OAuth {
+  id                    String               @id @default(uuid())
+  email                 String               @unique
+  token                 String?
+  refreshToken          String?
+  tokenExpiryDateTime   DateTime?
+  userId                String?
+  user                  User?                @relation(fields: [userId], references: [id])
+  oAuthOutlookAccountId String?
+  oAuthOutlookAccount   OAuthOutlookAccount? @relation(fields: [oAuthOutlookAccountId], references: [id])
+}
+
+model EmailSubscription {
+  SubscriptionId                 String  @id
+  AccessToken                    String
+  Resource                       String
+  ChangeType                     String
+  ClientState                    String
+  NotificationUrl                String
+  SubscriptionExpirationDateTime String
+  userId                         String?
+  user                           User?   @relation(fields: [userId], references: [id])
+}
+
+model OAuthOutlookAccount {
+  id             String  @id @default(uuid())
+  environment    String
+  homeAccountId  String
+  localAccountId String
+  tenantId       String
+  username       String
+  idTokenClaims  Json?
+  name           String?
+  OAuth          OAuth[]
+}
+
+model Shedule {
+  id                        String           @id @default(uuid())
+  duration                  Int
+  email                     String
+  debut                     DateTime
+  fin                       DateTime
+  objet                     String
+  sujet                     String
+  niveau                    String
+  localisation              String
+  buildingId                String
+  userInvited               Json
+  User                      User?            @relation(fields: [userId], references: [id])
+  userId                    String?
+  status                    SheduleStatus
+  reservedSlot              String
+  proposedSlots             String
+  acceptedSlot              DateTime?
+  creationDate              String
+  reservationExpirationDate String
+  reminder                  String
+  GMT                       Int
+  eventId                   String?
+  messageId                 String?
+  addressId                 String?
+  lang                      String?
+  confirmedMessageId        String?
+  usertoken                 String?
+  visioConf                 Boolean          @default(false)
+  type                      TypeEnum
+  personNumber              Int
+  updatedAt                 DateTime         @updatedAt
+  createdAt                 DateTime         @default(now())
+  BookingSchedule           BookingSchedule?
+  Task                      Task[]
+}
+
+model Notification {
+  id     String  @id @default(uuid())
+  token  String
+  User   User?   @relation(fields: [userId], references: [id])
+  userId String?
+}
+
+model Address {
+  id             String  @id @default(uuid())
+  libelle        String
+  adresse        String
+  isRemoved      Boolean @default(false)
+  User           User?   @relation(fields: [userId], references: [id])
+  userId         String?
+  Room           Room[]
+  defaultAddress Boolean
+  fromRemote     Boolean
+}
+
+model Preference {
+  id                          String   @id @default(uuid())
+  workingDays                 String
+  workingHoursBegin           DateTime
+  workingHoursEnd             DateTime
+  pauseHours                  String
+  highCanRescheduleLow        Boolean
+  highCanRescheduleMedium     Boolean
+  highCanSkipPauseTimes       Boolean
+  highCanExtendWorkingTimes   Boolean
+  hightWorkingHoursBegin      DateTime
+  highWorkingHoursEnd         DateTime
+  mediumCanRescheduleLow      Boolean
+  mediumCanSkipPauseTimes     Boolean
+  mediumCanExtendWorkingHours Boolean
+  mediumWorkingHoursBegin     DateTime
+  mediumWorkingHoursEnd       DateTime
+  userId                      String?
+  User                        User?    @relation(fields: userId, references: id)
+  waitngResponseTimeForHIM    Int
+  waitngResponseTimeForMIM    Int
+  waitngResponseTimeForLIM    Int
+  averageTravelTime           Int
+  updatedAt                   DateTime @updatedAt
+  createdAt                   DateTime @default(now())
+}
+
+model IncomingRequest {
+  id                    String    @id @default(uuid())
+  typeMail              String
+  location              String
+  sender                String
+  recipients            String
+  object                String
+  senderFullName        String
+  contents              String
+  dateEntity            String
+  userId                String?
+  User                  User?     @relation(fields: userId, references: id)
+  appointmentStatus     String?
+  appointmentUserAction String?
+  eventId               String?
+  htmlBody              String
+  GMT                   Int
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime? @updatedAt
+  sheduleId             String?
+  schedulePriority      String?
+}
+
+model IncomingMeetingRequest {
+  id                    String    @id @default(uuid())
+  typeMail              String
+  location              String
+  sender                String
+  recipients            String
+  object                String
+  senderFullName        String
+  contents              String
+  messageId             String    @unique
+  dateEntity            String
+  lang                  String?
+  userId                String?
+  User                  User?     @relation(fields: userId, references: id)
+  appointmentStatus     String?
+  appointmentUserAction String?
+  eventId               String?
+  htmlBody              String
+  GMT                   Int
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime? @updatedAt
+  sheduleId             String?
+  schedulePriority      String?
+}
+
+model Room {
+  id                   String  @id @default(uuid())
+  resourcesId          String
+  resourceName         String
+  resourceType         String
+  generateResourceName String
+  resourceEmail        String
+  capacity             Int
+  buildingId           String
+  resourceCategory     String
+  address              Address @relation(fields: [addressId], references: id)
+  addressId            String
+}
+
+model BackOfficeUser {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  firstName String
+  lastName  String
+  password  String?
+  avatar    String?
+  role      RoleEnum @default(ADMIN)
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+  isBanned  Boolean  @default(false)
+  isRemoved Boolean
+}
+
+model EmailToTrainTheModel {
+  id      String @id @default(uuid())
+  object  String
+  content String
+}
+
+model Task {
+  id           String    @id @default(uuid())
+  duration     Int
+  tag          String?
+  status       String?
+  notes        String?
+  timezone     String?
+  startTime    String?
+  endTime      String?
+  deadline     DateTime?
+  title        String
+  mode         String
+  assignedTo   String?
+  endDate      DateTime?
+  participants Json?
+  priority     String?
+  startDate    DateTime?
+  parentTaskId String?
+  progress     Int?
+  updatedAt    DateTime  @updatedAt
+  createdAt    DateTime  @default(now())
+  userId       String?
+  scheduleId   String?
+
+  parentTask Task?    @relation("ParentTask", fields: [parentTaskId], references: [id])
+  user       User?    @relation(fields: [userId], references: [id])
+  schedule   Shedule? @relation(fields: [scheduleId], references: [id])
+  Task       Task[]   @relation("ParentTask")
+
+  @@map("Task")
+}

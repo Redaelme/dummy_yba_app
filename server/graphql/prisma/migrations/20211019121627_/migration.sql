@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "signupCompleted" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN     "isSingupBO" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN     "isActive" BOOLEAN NOT NULL DEFAULT false,
+ALTER COLUMN "mailService" DROP NOT NULL,
+ALTER COLUMN "calendarType" DROP NOT NULL;

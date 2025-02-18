@@ -1,0 +1,61 @@
+--- adb starting (pid 24533) ---
+adb I 07-27 15:21:34 24533 24533 main.cpp:57] Android Debug Bridge version 1.0.39
+adb I 07-27 15:21:34 24533 24533 main.cpp:57] Version 1:8.1.0+r23-5ubuntu2
+adb I 07-27 15:21:34 24533 24533 main.cpp:57] Installed as /usr/lib/android-sdk/platform-tools/adb
+adb I 07-27 15:21:34 24533 24533 main.cpp:57] 
+adb I 07-27 15:21:34 24533 24533 adb_auth_host.cpp:416] adb_auth_init...
+adb I 07-27 15:21:34 24533 24533 adb_auth_host.cpp:174] read_key_file '/root/.android/adbkey'...
+adb I 07-27 15:21:34 24533 24533 adb_auth_host.cpp:391] adb_auth_inotify_init...
+adb I 07-27 15:21:34 24533 24533 adb_auth_host.cpp:467] Calling send_auth_response
+adb server killed by remote request
+--- adb starting (pid 25525) ---
+adb I 07-27 15:25:06 25525 25525 main.cpp:57] Android Debug Bridge version 1.0.39
+adb I 07-27 15:25:06 25525 25525 main.cpp:57] Version 1:8.1.0+r23-5ubuntu2
+adb I 07-27 15:25:06 25525 25525 main.cpp:57] Installed as /usr/lib/android-sdk/platform-tools/adb
+adb I 07-27 15:25:06 25525 25525 main.cpp:57] 
+adb I 07-27 15:25:06 25525 25525 adb_auth_host.cpp:416] adb_auth_init...
+adb I 07-27 15:25:06 25525 25525 adb_auth_host.cpp:174] read_key_file '/root/.android/adbkey'...
+adb I 07-27 15:25:06 25525 25525 adb_auth_host.cpp:391] adb_auth_inotify_init...
+adb I 07-27 15:25:06 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 15:26:39 25525 25525 services.cpp:277] failed to connect to socket 'tcp:8097': Connection refused
+adb E 07-27 15:31:08 25525 25525 services.cpp:277] failed to connect to socket 'tcp:8097': Connection refused
+adb E 07-27 15:34:06 25525 25525 services.cpp:277] failed to connect to socket 'tcp:8097': Connection refused
+adb E 07-27 15:41:17 25525 25530 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 15:41:18 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 15:42:54 25525 27457 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 15:42:56 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 15:43:53 25525 27615 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 15:43:54 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 15:48:08 25525 27700 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 15:48:09 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 15:48:30 25525 28236 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 15:48:31 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 15:52:23 25525 28297 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 15:52:25 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:00:30 25525 28545 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:00:32 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:00:32 25525 28907 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:00:34 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:00:45 25525 28930 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:00:47 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:05:36 25525 28982 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:05:37 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:07:58 25525 29241 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:07:59 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:09:30 25525 30041 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:09:31 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:09:38 25525 30153 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:09:39 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb E 07-27 16:17:02 25525 30198 transport_usb.cpp:146] remote usb: 1 - write terminated: Invalid argument
+adb I 07-27 16:17:04 25525 25525 adb_auth_host.cpp:467] Calling send_auth_response
+adb server killed by remote request
+--- adb starting (pid 6303) ---
+adb I 07-27 16:31:28  6303  6303 main.cpp:57] Android Debug Bridge version 1.0.39
+adb I 07-27 16:31:28  6303  6303 main.cpp:57] Version 1:8.1.0+r23-5ubuntu2
+adb I 07-27 16:31:28  6303  6303 main.cpp:57] Installed as /usr/lib/android-sdk/platform-tools/adb
+adb I 07-27 16:31:28  6303  6303 main.cpp:57] 
+adb I 07-27 16:31:28  6303  6303 adb_auth_host.cpp:416] adb_auth_init...
+adb I 07-27 16:31:28  6303  6303 adb_auth_host.cpp:174] read_key_file '/root/.android/adbkey'...
+adb I 07-27 16:31:28  6303  6303 adb_auth_host.cpp:391] adb_auth_inotify_init...
+adb I 07-27 16:31:28  6303  6303 adb_auth_host.cpp:467] Calling send_auth_response
+adb server killed by remote request

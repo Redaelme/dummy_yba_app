@@ -1,0 +1,3 @@
+---
+project_path: '{{ project_root }}/{{ project_name }}-prod'
+docker_compose_file: docker-compose.prod.yml

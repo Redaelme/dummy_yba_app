@@ -1,0 +1,73 @@
+<tr>
+    <td class="content">
+        <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+            <tr>
+                <td style="padding:0 0 10px 0;color:#153643;">
+                    <p class="textPlain">Hello,</p>
+                    <p class="textPlain justifyText">Thank you for promptly responding to the proposed time slots. Please find the meeting details below.</p>
+                    <p class="textPlain justifyText">I've also sent you a calendar invitation in parallel.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="p0">
+                    <table>
+                        <tr>
+                            <td style="display: flex; align-items: center;">
+                                <h3 class="title p0">Meeting Subject:</h3>
+                                {{#if subject}}
+                                    <p>
+                                        {{subject}}
+                                    </p>
+                                {{else}}
+                                    <p>
+                                        No subject
+                                    </p>
+                                {{/if}}
+                            </td>
+                        </tr>
+                        {{#if calendar}}
+                            <tr>
+
+                                <td class="">
+                                    <h3 class="title p0">Proposed Agenda:</h3>
+                                    <ul class="textPlain" style="list-style: none;padding-left:0px;">
+                                        {{#each calendar}}
+                                            <li>{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </td>
+                            </tr>
+                        {{/if}}
+                        <tr>
+                                        <td style="display: flex; align-items: center;">
+                                            <h3 class="title p0">Location:</h3>
+                                            <p>
+                                                {{#if location}}
+                                                    <span style="display: none;">[debut_localisation]</span>{{location}}<span style="display: none;">[fin_localisation]</span>
+                                                {{else}}
+                                                    <span style="margin-top: -2px;">Location not specified</span>
+                                                {{/if}}
+                                            </p>
+                                        </td>
+                                    </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="">
+                                <h3 class="title p0">Date and Time:</h3>
+                                <ul class="hourlyCrennals">
+                                    {{#each slots}}
+                                        <li class="textPlain pb5">{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+    <td style="display: none;">
+        <p>[mail_bloque_yesboss_2021]</p>
+    </td>
+</tr>

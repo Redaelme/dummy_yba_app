@@ -1,0 +1,11 @@
+[all:vars]
+ansible_python_interpreter=/usr/bin/python
+
+[staging]
+45.92.108.59
+
+[preprod]
+82.165.163.47
+
+[prod]
+82.165.163.47

@@ -1,0 +1,220 @@
+body {
+  background-color: #dbdbdb;
+  color: #5c6360;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 750px;
+  background-color: #ffffff;
+  min-height: 98vh;
+  margin: auto;
+  position: relative;
+  box-shadow: 3px 3px 23px -7px rgba(0, 0, 0, 0.47);
+  -webkit-box-shadow: 3px 3px 23px -7px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 3px 3px 23px -7px rgba(0, 0, 0, 0.47);
+}
+
+.header {
+  height: 150px;
+  background-image: url('/images/background.svg');
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.padglobal {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.icon {
+  height: 90px;
+}
+
+.content {
+  padding: 20px 4%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.details {
+  margin: 0px 0px 10px 0px;
+}
+
+.btnSend {
+  background-color: #3c7548;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  display: block;
+  max-width: 300px;
+  text-align: center;
+}
+
+.btnCancel {
+  background-color: unset;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #3c7548;
+  color: #3c7548;
+  padding: 15px 40px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+}
+
+.btnSend:hover {
+  background-color: #284c2f;
+}
+
+.justifyText {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+a.link {
+  color: #3c7548;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.footer {
+  background-color: #ebf1ec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer > div {
+  align-items: center;
+  display: flex;
+}
+
+.footer > div img {
+  margin-left: 10px;
+}
+
+div.details div {
+  width: 32%;
+}
+
+.check {
+  display: flex;
+}
+
+.twobtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.separator {
+  width: 30px;
+  height: 8px;
+}
+
+@media (max-width: 450px) {
+  .check {
+    flex-direction: column;
+  }
+
+  div.details div {
+    width: 100%;
+  }
+
+  .twobtn {
+    flex-direction: column;
+  }
+
+  .btnSend {
+    max-width: 100%;
+  }
+
+  .locationInformationContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hourlyCrennals {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  columns: 2;
+  column-gap: 80px;
+}
+.greenText {
+  color: #3c7548;
+  font-size: medium;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.fullButton {
+  background-color: #3c7548;
+  color: #fff;
+  border-width: 0px;
+}
+
+.button {
+  font-family: sans-serif;
+  border-radius: 4px;
+  font-size: medium;
+  /* display: block; */
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.btnlink {
+  padding: 15px 15px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.btnSendDisabled {
+  max-width: 300px;
+  border-width: 0px;
+  text-transform: uppercase;
+}
+
+.locationInformation {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.locationInformationContainer {
+  display: flex;
+}
+.locationInformationInput {
+  height: 48px;
+  background: #dbdbdb45 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  border-width: inherit;
+  margin: 0px 20px 0px 0px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #5c6360;
+}
+.locationInformationLabel {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,85 @@
+<tr>
+    <td class="content">
+        <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+            <tr>
+                <td style="padding:0 0 10px 0;color:#153643;">
+                    <p class="textPlain">Hello,</p>
+                    <p class="textPlain justifyText">Unfortunately, some participants are unavailable for the previously proposed time slots. Please review the new options below and select the slots that work best for you.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="p0">
+                    <table>
+                        <tr>
+                            <td style="display: flex; align-items: center;">
+                                <h3 class="title p0">Meeting Subject:</h3>
+                                {{#if subject}}
+                                    <p>
+                                        {{subject}}
+                                    </p>
+                                {{else}}
+                                    <p>
+                                        No subject
+                                    </p>
+                                {{/if}}
+                            </td>
+                        </tr>
+                        <tr>
+                                        <td style="display: flex; align-items: center;">
+                                            <h3 class="title p0">Location:</h3>
+                                            <p>
+                                                {{#if location}}
+                                                    <span style="display: none;">[debut_localisation]</span>{{location}}<span style="display: none;">[fin_localisation]</span>
+                                                {{else}}
+                                                    <span style="margin-top: -2px;">Location not specified</span>
+                                                {{/if}}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                                {{#if timezone}}
+
+                        <tr>
+                            <td style="display: flex; align-items: center;">
+                                <h3 class="title p0">Time Zone:</h3>
+                                <p>{{timezone}}</p>
+                            </td>
+                        </tr>
+                        {{/if}}
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="">
+                                <h3 class="title p0">Time Slots:</h3>
+                                <ul class="hourlyCrennals">
+                                    {{#each slots}}
+                                        <li class="textPlain pb5">{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <p style="display: none;">[[[{{yesBoss}}]]]</p>
+        <table style="margin-top: 20px;">
+            <tr>
+                <td style="padding:0;vertical-align:top;color:#153643;width: auto;padding-right: 16px;">
+                    <a href="{{choseSlotUrl}}" target="_blank" class="btn btnlink linkone fullButton button"
+                       style="background-color: #3c7548;padding: 15px 15px;text-align: center;border-radius: 5px;text-decoration: none;
+                        display: block;color: #fff;border-width: 0px;font-family: sans-serif;border-radius: 4px;font-size: medium;
+                        text-decoration: none;text-align: center;justify-content: center;align-items: center;display: flex;">
+                        <span style="color:#fff;">Choose from these time slots</span></a>
+                </td>
+                <td style="padding:0;vertical-align:top;color:#153643;width: auto;padding-left: 16px;">
+                    <a align="center" href="{{askOtherSlots}}" target="_blank" class="btn btnlink linktwo outlinedButton button"
+                       style="padding: 15px 15px;text-align: center;border-radius: 5px;text-decoration: none;display: block;
+                        background-color: #ffffff;color: #3c7548;border: 1px solid #3c7548;background-color: unset;border-color: #3c7548;
+                        color: #3c7548;border: 1px solid #3c7548;font-family: sans-serif;border-radius: 4px;font-size: medium;text-decoration: none;
+                        text-align: center;justify-content: center;align-items: center;display: flex;">
+                        <span style="color:#153643;">Request other time slots</span></a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>

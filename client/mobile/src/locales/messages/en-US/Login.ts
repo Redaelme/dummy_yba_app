@@ -1,0 +1,16 @@
+export default {
+  'login.text.login': 'Login',
+  'login.input.placeholder.email': 'Email',
+  'login.input.placeholder.password': 'Password',
+  'login.text.forgotPassword': 'Forgot password?',
+  'login.button.toLogIn': 'Log in',
+  'login.error.emailNotFound.message': "The email provided doesn't match any account",
+  'login.error.invalidPassword.message': 'The password is incorrect',
+  'login.error.invalidEmail.message': "The email address is invalid",
+  'login.error.requiredInput.message': 'Email and password fields are required',
+  'login.success.message': 'Successful login',
+  'login.error.networkFailed.message': 'Network error',
+  'login.textInput.password.required': 'Password is required',
+  'login.textInput.email.required': 'Email is required',
+  'login.another.errors.message': 'An error occurred',
+};

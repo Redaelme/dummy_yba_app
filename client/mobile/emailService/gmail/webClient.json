@@ -1,0 +1,13 @@
+{
+  "web": {
+    "client_id": "619184537485-3ev166elaa89jd4fg88aamguuth5pviq.apps.googleusercontent.com",
+    "project_id": "yesboss-316810",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "KcHWugZ1mvUP2TEWYXTk-0a4",
+    "javascript_origins": [
+      "http://localhost:4000"
+    ]
+  }
+}

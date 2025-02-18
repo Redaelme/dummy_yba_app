@@ -1,0 +1,138 @@
+appointmentsInput: [Object: null prototype] {
+  userInvited: [
+    [Object: null prototype] {
+      email: 'shharinala101@gmail.com',
+      required: true
+    }
+  ],
+  duration: 45,
+  email: 'safidyharinala101@gmail.com',
+  debut: 2021-09-07T06:00:00.000Z,
+  fin: 2021-09-07T17:00:00.000Z,
+  objet: 'LOCALE',
+  sujet: 'HARINALA',
+  niveau: 'HAUTE',
+  localisation: [Object: null prototype] {
+    visioConf: false,
+    location: 'ankorondrano'
+  },
+  reminder: ''
+}
+Token verification
+now:Tuesday 24th 14:22-expiry_date:Tuesday 24th 12:43 true
+Get New token with refresh token undefined
+new: {
+  token: 'ya29.a0ARrdaM-MakNitglvvnfp_ufCuC1x-XuIe1pSwmxvRDJzD4O_NiypRIukF5FuvK3ZEcl3W7gfmkkO6hdYBFjTbQMXVUnX3vTjAD72MW2BECm-pnVTLK1jpyj3IF1wo7wJQnm7XWhbKTuF9e_ezZY5ec_dqeupbA',
+  res: {
+    config: {
+      method: 'POST',
+      url: 'https://oauth2.googleapis.com/token',
+      data: 'refresh_token=1%2F%2F03VPR_psTGkmMCgYIARAAGAMSNwF-L9IrACfojW5SuNW8hh-3PTB-NYbHhWmD70YlVNWHuckH-HZ_BGqKVCgmsYx9FNaXobttduA&client_id=619184537485-qgtga0il4e52gc41mocn87q90jni54qa.apps.googleusercontent.com&client_secret=98ImW9zey0NJdD-PYQQW6q3T&grant_type=refresh_token',
+      headers: [Object],
+      params: [Object: null prototype] {},
+      paramsSerializer: [Function: paramsSerializer],
+      body: 'refresh_token=1%2F%2F03VPR_psTGkmMCgYIARAAGAMSNwF-L9IrACfojW5SuNW8hh-3PTB-NYbHhWmD70YlVNWHuckH-HZ_BGqKVCgmsYx9FNaXobttduA&client_id=619184537485-qgtga0il4e52gc41mocn87q90jni54qa.apps.googleusercontent.com&client_secret=98ImW9zey0NJdD-PYQQW6q3T&grant_type=refresh_token',
+      validateStatus: [Function: validateStatus],
+      responseType: 'json'
+    },
+    data: {
+      access_token: 'ya29.a0ARrdaM-MakNitglvvnfp_ufCuC1x-XuIe1pSwmxvRDJzD4O_NiypRIukF5FuvK3ZEcl3W7gfmkkO6hdYBFjTbQMXVUnX3vTjAD72MW2BECm-pnVTLK1jpyj3IF1wo7wJQnm7XWhbKTuF9e_ezZY5ec_dqeupbA',
+      scope: 'https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/gmail.modify openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/contacts.readonly',
+      token_type: 'Bearer',
+      id_token: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjZlZjRiZDkwODU5MWY2OTdhOGE5Yjg5M2IwM2U2YTc3ZWIwNGU1MWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2MTkxODQ1Mzc0ODUtcWd0Z2EwaWw0ZTUyZ2M0MW1vY244N3E5MGpuaTU0cWEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2MTkxODQ1Mzc0ODUtcWd0Z2EwaWw0ZTUyZ2M0MW1vY244N3E5MGpuaTU0cWEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDEwMDkyMjU2Nzc0NzQyODI3NzciLCJlbWFpbCI6InNhZmlkeWhhcmluYWxhMTAxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiWXA1ZFdKSWNnVnRsZ1pROGl4bGdBdyIsImlhdCI6MTYyOTgwMzI1NywiZXhwIjoxNjI5ODA2ODU3fQ.UKa3A8EPiSsi14YLUagmtUC1S_tSNmox_qVGvaZmTsFG3CTiiz9EDRCDaH5b8Obs0kAlbPdk0kTSxOiSZsvgC1OnjhB2eQiAXowpq858dpuDgnQOySJvbfSCNj4vjcX26sU5KNO2jwW0qFXu19Gf6DqTaorsMEh33C4-1dLH16-9bszL8tgphqxpnx7hMxN7lXogwf4A9N-EYe1oaSYvNniqA7yGfEUSVW7U2u0haESBa3x0r_rC-5p_KxEZ9DUYQImL73lRpyiFUezTvwhPq0Xc4UaDTZN30ypyDO2pACRXe22vOa7k4wv0g35w2z435f-IR7B09whenfCkCqlr2g',
+      expiry_date: 1629806857383,
+      refresh_token: '1//03VPR_psTGkmMCgYIARAAGAMSNwF-L9IrACfojW5SuNW8hh-3PTB-NYbHhWmD70YlVNWHuckH-HZ_BGqKVCgmsYx9FNaXobttduA'
+    },
+    headers: {
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"',
+      'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+      connection: 'close',
+      'content-encoding': 'gzip',
+      'content-type': 'application/json; charset=utf-8',
+      date: 'Tue, 24 Aug 2021 11:07:37 GMT',
+      expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+      pragma: 'no-cache',
+      server: 'scaffolding on HTTPServer2',
+      'transfer-encoding': 'chunked',
+      vary: 'Origin, X-Origin, Referer',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-xss-protection': '0'
+    },
+    status: 200,
+    statusText: 'OK'
+  }
+}
+allEvents ===> 0
+{"config":{"url":"https://www.googleapis.com/calendar/v3/freeBusy?alt=JSON","method":"POST","data":{"timeMin":"2021-09-07T06:00:00.000Z","timeMax":"2021-09-07T17:00:00.000Z","items":[{"id":"safidyharinala101@gmail.com"}]},"headers":{"Accept-Encoding":"gzip","User-Agent":"google-api-nodejs-client/0.7.2 (gzip)","Authorization":"Bearer ya29.a0ARrdaM-MakNitglvvnfp_ufCuC1x-XuIe1pSwmxvRDJzD4O_NiypRIukF5FuvK3ZEcl3W7gfmkkO6hdYBFjTbQMXVUnX3vTjAD72MW2BECm-pnVTLK1jpyj3IF1wo7wJQnm7XWhbKTuF9e_ezZY5ec_dqeupbA","Content-Type":"application/json","Accept":"application/json"},"params":{"alt":"JSON"},"body":"{\"timeMin\":\"2021-09-07T06:00:00.000Z\",\"timeMax\":\"2021-09-07T17:00:00.000Z\",\"items\":[{\"id\":\"safidyharinala101@gmail.com\"}]}","responseType":"json"},"data":{"kind":"calendar#freeBusy","timeMin":"2021-09-07T06:00:00.000Z","timeMax":"2021-09-07T17:00:00.000Z","calendars":{"safidyharinala101@gmail.com":{"busy":[{"start":"2021-09-07T07:00:00Z","end":"2021-09-07T08:00:00Z"}]}}},"headers":{"alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","cache-control":"no-cache, no-store, max-age=0, must-revalidate","connection":"close","content-encoding":"gzip","content-type":"application/json; charset=UTF-8","date":"Tue, 24 Aug 2021 11:07:38 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","server":"ESF","transfer-encoding":"chunked","vary":"Origin, X-Origin, Referer","x-content-type-options":"nosniff","x-frame-options":"SAMEORIGIN","x-xss-protection":"0"},"status":200,"statusText":"OK"}
+----------------------- safidyharinala101@gmail.com --------------------------
+events ==> [ { start: '2021-09-07T07:00:00Z', end: '2021-09-07T08:00:00Z' } ]
+available ==> [
+  [ 'Tuesday 7th 06:00:00-Tuesday 7th 07:00:00-60' ],
+  [ 'Tuesday 7th 08:00:00-Tuesday 7th 17:00:00-540' ]
+]
+{"config":{"url":"https://www.googleapis.com/calendar/v3/freeBusy?alt=JSON","method":"POST","data":{"timeMin":"2021-09-07T06:00:00.000Z","timeMax":"2021-09-07T17:00:00.000Z","items":[{"id":"shharinala101@gmail.com"}]},"headers":{"Accept-Encoding":"gzip","User-Agent":"google-api-nodejs-client/0.7.2 (gzip)","Authorization":"Bearer ya29.a0ARrdaM-MakNitglvvnfp_ufCuC1x-XuIe1pSwmxvRDJzD4O_NiypRIukF5FuvK3ZEcl3W7gfmkkO6hdYBFjTbQMXVUnX3vTjAD72MW2BECm-pnVTLK1jpyj3IF1wo7wJQnm7XWhbKTuF9e_ezZY5ec_dqeupbA","Content-Type":"application/json","Accept":"application/json"},"params":{"alt":"JSON"},"body":"{\"timeMin\":\"2021-09-07T06:00:00.000Z\",\"timeMax\":\"2021-09-07T17:00:00.000Z\",\"items\":[{\"id\":\"shharinala101@gmail.com\"}]}","responseType":"json"},"data":{"kind":"calendar#freeBusy","timeMin":"2021-09-07T06:00:00.000Z","timeMax":"2021-09-07T17:00:00.000Z","calendars":{"shharinala101@gmail.com":{"errors":[{"domain":"global","reason":"notFound"}],"busy":[]}}},"headers":{"alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","cache-control":"no-cache, no-store, max-age=0, must-revalidate","connection":"close","content-encoding":"gzip","content-type":"application/json; charset=UTF-8","date":"Tue, 24 Aug 2021 11:07:38 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","server":"ESF","transfer-encoding":"chunked","vary":"Origin, X-Origin, Referer","x-content-type-options":"nosniff","x-frame-options":"SAMEORIGIN","x-xss-protection":"0"},"status":200,"statusText":"OK"}
+----------------------- shharinala101@gmail.com --------------------------
+events ==> []
+available ==> [ [ 'Tuesday 7th 06:00:00-Tuesday 7th 17:00:00-660' ] ]
+ after check intersectionsss: [
+  {
+    start: 2021-09-07T06:00:00.000Z,
+    end: 2021-09-07T07:00:00.000Z,
+    duration: 3600000
+  },
+  {
+    start: 2021-09-07T08:00:00.000Z,
+    end: 2021-09-07T17:00:00.000Z,
+    duration: 32400000
+  }
+]
+ after filter DURATION: [
+  'Tuesday 7th 06:00 -Tuesday 7th 07:00 - duration :60',
+  'Tuesday 7th 08:00 -Tuesday 7th 17:00 - duration :540'
+]
+found holiday
+events ==> []
+events ==> []
+ after check holidays: [
+  'Tuesday 7th 06:00 -Tuesday 7th 07:00 - duration :59',
+  'Tuesday 7th 08:00 -Tuesday 7th 17:00 - duration :539'
+]
+ after check working-day: [
+  'Tuesday 7th 06:00 -Tuesday 7th 07:00 - duration :59',
+  'Tuesday 7th 08:00 -Tuesday 7th 17:00 - duration :539'
+]
+working times-----: Tuesday2 7th 06:00 / Tuesday2 7th 14:00
+working times-----: Tuesday2 7th 06:00 / Tuesday2 7th 14:00
+after check work times: [
+  'Tuesday 7th 06:00 -Tuesday 7th 07:00 - duration :3600000',
+  'Tuesday 7th 08:00 -Tuesday 7th 14:00 - duration :21600000'
+]
+create Shedule
+multipleShedule ==>  [
+  { start: 'Tuesday 7th 06:00', end: 'Tuesday 7th 06:00' },
+  { start: 'Tuesday 7th 08:00', end: 'Tuesday 7th 08:00' },
+  { start: 'Tuesday 7th 08:30', end: 'Tuesday 7th 08:30' },
+  { start: 'Tuesday 7th 09:00', end: 'Tuesday 7th 09:00' },
+  { start: 'Tuesday 7th 09:30', end: 'Tuesday 7th 09:30' },
+  { start: 'Tuesday 7th 10:00', end: 'Tuesday 7th 10:00' },
+  { start: 'Tuesday 7th 10:30', end: 'Tuesday 7th 10:30' },
+  { start: 'Tuesday 7th 11:00', end: 'Tuesday 7th 11:00' },
+  { start: 'Tuesday 7th 11:30', end: 'Tuesday 7th 11:30' },
+  { start: 'Tuesday 7th 12:00', end: 'Tuesday 7th 12:00' },
+  { start: 'Tuesday 7th 12:30', end: 'Tuesday 7th 12:30' },
+  { start: 'Tuesday 7th 13:00', end: 'Tuesday 7th 13:00' }
+]
+send mail 
+min ==> 10
+hours ==>  14
+date ==>  24
+month ==>  8
+removed events :: null
+email successfully sent to  [ 'shharinala101@gmail.com' ]
+**************************************************
+++++++++++++ INIT CRON FILE RESEND MAIL FUNCT ++++++++++++++++++
+++++++++++++ SLOT SAVE FUNCT IN CRON ++++++++++++++++++
+isNotResponded ==>  false
+Resend mail done
+

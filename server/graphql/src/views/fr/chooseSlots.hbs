@@ -1,0 +1,75 @@
+<div class="content">
+
+    <form action="/slot/confirmChoice" method="POST">
+        <input type="hidden" id="token" name="token" value="{{token}}">
+        <div>
+            <div class="title">
+                <!-- <img src="/images/todayCalendar.svg" alt="menu" width="25"> -->
+                <h3 style="font-size: x-large;">Propositions de Créneaux</h3>
+            </div>
+            <p class="details greenText">Veuillez cocher tous les créneaux qui vous conviennent.<br><br>
+                Plus vous en sélectionnez, plus l’organisation des réunions de groupe sera facilitée.</p>
+            <div class="details check">
+                <ul class="hourlyCrennals">
+                    {{#each slots}}
+                        <li class="textPlain pb5" title="{{#if this.disabled}}Créneau réservé pour un autre rendez-vous{{else}}Créneau disponible{{/if}}">
+                            <input type="checkbox" {{#if this.disabled}}disabled{{else}}{{/if}} id="{{this.value}}" name="slots" class="slots" value="{{this.value}}">
+                            <label for="slots">{{this.text}}</label><br>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="title">
+                <img src="/images/interests.svg" alt="menu" width="25">
+                <h3 style="padding-left: 10px;">Objet du rendez-vous</h3>
+            </div>
+            <p class="details">{{subject}}</p>
+        </div>
+        {{#if calendar}}
+            <div>
+                <div class="title">
+                    <img src="/images/interests.svg" alt="menu" width="25" style="opacity: 0;">
+                    <h3 style="padding-left: 10px;">Agenda proposé</h3>
+                </div>
+                <ul class="textPlain" style="list-style: none;padding-bottom: 20px;" >
+                    {{#each calendar}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+        <div>
+            <div class="title">
+                <img src="/images/location.svg" alt="menu" width="25">
+                <h3 style="padding-left: 10px;">Lieu du rendez-vous</h3>
+            </div>
+            {{#isEnterLocation location "Demander une localisation"}}
+                <div class="locationInformationContainer details">
+                    <div class="locationInformation">
+                        <label class="locationInformationLabel" for="street">Rue</label>
+                        <input class="locationInformationInput" type="text" id="street" name="street">
+                    </div>
+                    <div class="locationInformation">
+                        <label class="locationInformationLabel" for="city">Ville</label>
+                        <input class="locationInformationInput" type="text" id="city" name="city">
+                    </div>
+                    <div class="locationInformation">
+                        <label class="locationInformationLabel" for="postalCode">Code Postal</label>
+                        <input class="locationInformationInput" type="postalCode" id="street" name="postalCode">
+                    </div>
+                </div>
+
+            {{else}}
+                <p class="details">{{location}}</p>
+            {{/isEnterLocation}}
+        </div>
+
+        <input class="btn btnlink linkone button btnSendDisabled" style="margin-top: 45px; width:100%" id="sendButton" type="submit" value="Send" disabled="disabled">
+
+    </form>
+    <a href="{{askOtherSlots}}" class="link" style=" margin-bottom: 45px; ">
+        Proposez-moi d'autres créneaux, aucun ne me convient
+    </a>
+</div>

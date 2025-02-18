@@ -1,0 +1,92 @@
+<tr>
+    <td style="padding:0 0 10px 0;color:#153643;">
+        <p class="textPlain">Bonjour,</p>
+        <p class="textPlain justifyText">Je suis l'assistant IA de {{firstname}}.</p>
+        <p class="textPlain justifyText">{{firstname}} aimerait vous inviter à participer à une réunion.</p>
+        <p class="textPlain justifyText">Vous pouvez sélectionner les créneaux qui vous conviennent ou me demander d'autres options en utilisant les boutons ci-dessous.</p>
+    </td>
+</tr>
+<tr>
+    <td class="p0">
+        <table>
+            <tr>
+                <td style="display: flex; align-items: center;">
+                    <h3 class="title p0">Objet du rendez-vous :</h3>
+                    {{#if subject}}
+                        <p>
+                            {{subject}}
+                        </p>
+                    {{else}}
+                        <p>
+                            Aucun sujet pour ce rendez-vous
+                        </p>
+                    {{/if}}
+                </td>
+            </tr>
+            {{#if calendar}}
+                <tr>
+
+                    <td class="">
+                        <h3 class="title p0">Agenda proposé :</h3>
+                        <ul class="textPlain" style="list-style: none;padding-left:0px;">
+                            {{#each calendar}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </td>
+                </tr>
+            {{/if}}
+            <tr>
+                <td style="display: flex; align-items: center;">
+                    <h3 class="title p0">Localisation :</h3>
+                    <p>
+                        {{#if location}}
+                            <span style="display: none;">[debut_localisation]</span>{{location}}<span style="display: none;">[fin_localisation]</span>
+                        {{else}}
+                            <span style="margin-top: -2px;">Localisation non spécifiée</span>
+                        {{/if}}
+                    </p>
+                </td>
+            </tr>
+        {{#if timezone}}
+            <tr>
+                <td style="display: flex; align-items: center;">
+                    <h3 class="title p0">Fuseau horaire :</h3>
+                    <p>{{timezone}}</p>
+                </td>
+            </tr>
+        {{/if}}
+        </table>
+        <table>
+            <tr>
+                <td class="">
+                    <h3 class="title p0">Créneaux :</h3>
+                    <ul class="hourlyCrennals">
+                        {{#each slots}}
+                            <li class="textPlain pb5">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<table style="margin-top: 20px;">
+    <tr>
+        <td style="padding:0;vertical-align:top;color:#153643;width: auto;padding-right: 16px;">
+            <a href="{{choseSlotUrl}}" target="_blank" class="btn btnlink linkone fullButton button"
+            style="background-color: #3c7548;padding: 15px 15px;text-align: center;border-radius: 5px;text-decoration: none;
+            display: block;color: #fff;border-width: 0px;font-family: sans-serif;border-radius: 4px;font-size: medium;
+            text-decoration: none;text-align: center;justify-content: center;align-items: center;display: flex;">
+                <span style="color: #fff;">Choisir parmi ces créneaux</span></a>
+        </td>
+        <td style="padding:0;vertical-align:top;color:#153643;width: auto;padding-left: 16px;">
+            <a href="{{askOtherSlots}}" target="_blank" class="btn btnlink linktwo outlinedButton button"
+            style="padding: 15px 15px;text-align: center;border-radius: 5px;text-decoration: none;display: block;
+            background-color: #ffffff;color: #3c7548;border: 1px solid #3c7548;background-color: unset;border-color: #3c7548;
+            color: #3c7548;border: 1px solid #3c7548;font-family: sans-serif;border-radius: 4px;font-size: medium;text-decoration: none;
+            text-align: center;justify-content: center;align-items: center;display: flex;">
+                <span style="color:#153643;">Demander d'autres créneaux</span></a>
+        </td>
+    </tr>
+</table>

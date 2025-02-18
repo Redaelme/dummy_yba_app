@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Groupe_12451" data-name="Groupe 12451" transform="translate(15992 10980)">
+    <rect id="Rectangle_2555" data-name="Rectangle 2555" width="50" height="50" rx="10" transform="translate(-15992 -10980)" fill="rgba(255,255,255,0)"/>
+    <g id="tick-mark" transform="translate(-15979 -10967)">
+      <g id="Groupe_50" data-name="Groupe 50" transform="translate(7 11)">
+        <g id="Groupe_47" data-name="Groupe 47">
+          <g id="Groupe_46" data-name="Groupe 46">
+            <path id="Tracé_31" data-name="Tracé 31" d="M13.515,21H8.357A1.359,1.359,0,0,1,7,19.643V12.357A1.359,1.359,0,0,1,8.357,11h7.285A1.359,1.359,0,0,1,17,12.357v5.157a1.5,1.5,0,0,1-.438,1.061l-1.986,1.986A1.515,1.515,0,0,1,13.515,21ZM8.357,12A.357.357,0,0,0,8,12.357v7.286A.357.357,0,0,0,8.357,20h5.157a.5.5,0,0,0,.354-.146l1.985-1.985A.5.5,0,0,0,16,17.514V12.357A.357.357,0,0,0,15.643,12Z" transform="translate(-7 -11)" fill="#5c6360"/>
+          </g>
+        </g>
+        <g id="Groupe_49" data-name="Groupe 49" transform="translate(1.565 2.366)">
+          <g id="Groupe_48" data-name="Groupe 48">
+            <path id="Tracé_32" data-name="Tracé 32" d="M11.2,18.634a.5.5,0,0,1-.354-.146L8.711,16.354a.5.5,0,1,1,.707-.707L11.174,17.4l3.384-3.866a.5.5,0,1,1,.752.659l-3.735,4.269a.5.5,0,0,1-.359.17H11.2Z" transform="translate(-8.565 -13.366)" fill="#5c6360"/>
+          </g>
+        </g>
+      </g>
+      <g id="Groupe_52" data-name="Groupe 52" transform="translate(0 2)">
+        <g id="Groupe_51" data-name="Groupe 51">
+          <path id="Tracé_33" data-name="Tracé 33" d="M21.5,24H2.5A2.5,2.5,0,0,1,0,21.5V4.5A2.5,2.5,0,0,1,2.5,2h19A2.5,2.5,0,0,1,24,4.5v17A2.5,2.5,0,0,1,21.5,24ZM2.5,3A1.5,1.5,0,0,0,1,4.5v17A1.5,1.5,0,0,0,2.5,23h19A1.5,1.5,0,0,0,23,21.5V4.5A1.5,1.5,0,0,0,21.5,3Z" transform="translate(0 -2)" fill="#5c6360"/>
+        </g>
+      </g>
+      <g id="Groupe_54" data-name="Groupe 54" transform="translate(0 7)">
+        <g id="Groupe_53" data-name="Groupe 53">
+          <path id="Tracé_34" data-name="Tracé 34" d="M23.5,8H.5a.5.5,0,1,1,0-1h23a.5.5,0,0,1,0,1Z" transform="translate(0 -7)" fill="#5c6360"/>
+        </g>
+      </g>
+      <g id="Groupe_56" data-name="Groupe 56" transform="translate(5)">
+        <g id="Groupe_55" data-name="Groupe 55">
+          <path id="Tracé_35" data-name="Tracé 35" d="M5.5,5A.5.5,0,0,1,5,4.5V.5a.5.5,0,1,1,1,0v4A.5.5,0,0,1,5.5,5Z" transform="translate(-5)" fill="#5c6360"/>
+        </g>
+      </g>
+      <g id="Groupe_58" data-name="Groupe 58" transform="translate(18)">
+        <g id="Groupe_57" data-name="Groupe 57">
+          <path id="Tracé_36" data-name="Tracé 36" d="M18.5,5a.5.5,0,0,1-.5-.5V.5a.5.5,0,0,1,1,0v4A.5.5,0,0,1,18.5,5Z" transform="translate(-18)" fill="#5c6360"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

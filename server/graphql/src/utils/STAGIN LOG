@@ -1,0 +1,89 @@
+| appointmentsInput: [Object: null prototype] {
+|   userInvited: [
+|     [Object: null prototype] {
+|       email: 'shharinala101@gmail.com',
+|       required: true
+|     }
+|   ],
+|   duration: 45,
+|   email: 'safidyharinala101@gmail.com',
+|   debut: 2021-09-07T06:00:00.000Z,
+|   fin: 2021-09-07T17:00:00.000Z,
+|   objet: 'STAGIN',
+|   sujet: 'LOCALE',
+|   niveau: 'HAUTE',
+|   localisation: [Object: null prototype] {
+|     visioConf: false,
+|     location: 'ankorondrano'
+|   },
+|   reminder: ''
+| }
+| Token verification
+| now:Tuesday 24th 11:26-expiry_date:Tuesday 24th 12:08 false
+| allEvents ===> 0
+| {"config":{"url":"https://www.googleapis.com/calendar/v3/freeBusy?alt=JSON","method":"post","data":{"timemin":"2021-09-07t06:00:00.000z","timemax":"2021-09-07t17:00:00.000z","items":[{"id":"shharinala101@gmail.com"}]},"headers":{"Accept-Encoding":"gzip","User-Agent":"google-api-nodejs-client/0.7.2 (gzip)","Authorization":"Bearer ya29.a0arrdam8xh2cwpsgtumeqoqdpmo-hjoyghvaiiazqbsuxvtk6mxqrzi9td0lnkjwp47vvbz67evoyt2pnnqgzhzljabreth10d0oz7-dc19qnjom6jeyz1mfoc0nn7ez3hw40nfzynvgy9yhqshi_ysnatsw8ig","content-type":"application/json","accept":"application/json"},"params":{"alt":"json"},"body":"{\"timemin\":\"2021-09-07t06:00:00.000z\",\"timemax\":\"2021-09-07t17:00:00.000z\",\"items\":[{\"id\":\"shharinala101@gmail.com\"}]}","responsetype":"json"},"data":{"kind":"calendar#freebusy","timemin":"2021-09-07t06:00:00.000z","timemax":"2021-09-07t17:00:00.000z","calendars":{"shharinala101":{"errors":[{"domain":"global","reason":"notFound"}],"busy":[]}}},"headers":{"alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","cache-control":"no-cache, no-store, max-age=0, must-revalidate","connection":"close","content-encoding":"gzip","content-type":"application/json; charset=UTF-8","date":"Tue, 24 Aug 2021 11:11:02 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","server":"ESF","transfer-encoding":"chunked","vary":"Origin, X-Origin, Referer","x-content-type-options":"nosniff","x-frame-options":"SAMEORIGIN","x-xss-protection":"0"},"status":200,"statusText":"OK"}
+| ----------------------- shharinala101@gmail.com --------------------------
+| events ==> []
+| available ==> [ [ 'Tuesday 7th 06:00:00-Tuesday 7th 17:00:00-660' ] ]
+| {"config":{"url":"https://www.googleapis.com/calendar/v3/freeBusy?alt=JSON","method":"post","data":{"timemin":"2021-09-07t06:00:00.000z","timemax":"2021-09-07t17:00:00.000z","items":[{"id":"safidyharinala101@gmail.com"}]},"headers":{"Accept-Encoding":"gzip","User-Agent":"google-api-nodejs-client/0.7.2 (gzip)","Authorization":"Bearer ya29.a0arrdam8xh2cwpsgtumeqoqdpmo-hjoyghvaiiazqbsuxvtk6mxqrzi9td0lnkjwp47vvbz67evoyt2pnnqgzhzljabreth10d0oz7-dc19qnjom6jeyz1mfoc0nn7ez3hw40nfzynvgy9yhqshi_ysnatsw8ig","content-type":"application/json","accept":"application/json"},"params":{"alt":"json"},"body":"{\"timemin\":\"2021-09-07t06:00:00.000z\",\"timemax\":\"2021-09-07t17:00:00.000z\",\"items\":[{\"id\":\"safidyharinala101@gmail.com\"}]}","responsetype":"json"},"data":{"kind":"calendar#freebusy","timemin":"2021-09-07t06:00:00.000z","timemax":"2021-09-07t17:00:00.000z","calendars":{"safidyharinala101":{"busy":[{"start":"2021-09-07T07:00:00Z","end":"2021-09-07T08:00:00Z"}]}}},"headers":{"alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","cache-control":"no-cache, no-store, max-age=0, must-revalidate","connection":"close","content-encoding":"gzip","content-type":"application/json; charset=UTF-8","date":"Tue, 24 Aug 2021 11:11:02 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","server":"ESF","transfer-encoding":"chunked","vary":"Origin, X-Origin, Referer","x-content-type-options":"nosniff","x-frame-options":"SAMEORIGIN","x-xss-protection":"0"},"status":200,"statusText":"OK"}
+| ----------------------- safidyharinala101@gmail.com --------------------------
+| events ==> [ { start: '2021-09-07T07:00:00Z', end: '2021-09-07T08:00:00Z' } ]
+| available ==> [
+|   [ 'Tuesday 7th 06:00:00-Tuesday 7th 07:00:00-60' ],
+|   [ 'Tuesday 7th 08:00:00-Tuesday 7th 17:00:00-540' ]
+| ]
+|  after check intersectionsss: [
+|   {
+|     start: 2021-09-07T06:00:00.000Z,
+|     end: 2021-09-07T07:00:00.000Z,
+|     duration: 3600000
+|   },
+|   {
+|     start: 2021-09-07T08:00:00.000Z,
+|     end: 2021-09-07T17:00:00.000Z,
+|     duration: 32400000
+|   }
+| ]
+|  after filter DURATION: [
+|   'Tuesday 7th 06:00 -Tuesday 7th 07:00 - duration :60',
+|   'Tuesday 7th 08:00 -Tuesday 7th 17:00 - duration :540'
+| ]
+| found holiday
+| events ==> []
+| events ==> []
+|  after check holidays: [
+|   'Tuesday 7th 06:00 -Tuesday 7th 07:00 - duration :59',
+|   'Tuesday 7th 08:00 -Tuesday 7th 17:00 - duration :539'
+| ]
+|  after check working-day: [
+|   'Tuesday 7th 06:00 -Tuesday 7th 07:00 - duration :59',
+|   'Tuesday 7th 08:00 -Tuesday 7th 17:00 - duration :539'
+| ]
+| working times-----: Tuesday2 7th 09:00 / Tuesday2 7th 17:00
+| working times-----: Tuesday2 7th 09:00 / Tuesday2 7th 17:00
+| after check work times: [ 'Tuesday 7th 09:00 -Tuesday 7th 17:00 - duration :28800000' ]
+| create Shedule
+| multipleShedule ==>  [
+|   { start: 'Tuesday 7th 09:00', end: 'Tuesday 7th 09:00' },
+|   { start: 'Tuesday 7th 09:30', end: 'Tuesday 7th 09:30' },
+|   { start: 'Tuesday 7th 10:00', end: 'Tuesday 7th 10:00' },
+|   { start: 'Tuesday 7th 10:30', end: 'Tuesday 7th 10:30' },
+|   { start: 'Tuesday 7th 11:00', end: 'Tuesday 7th 11:00' },
+|   { start: 'Tuesday 7th 11:30', end: 'Tuesday 7th 11:30' },
+|   { start: 'Tuesday 7th 12:00', end: 'Tuesday 7th 12:00' },
+|   { start: 'Tuesday 7th 12:30', end: 'Tuesday 7th 12:30' },
+|   { start: 'Tuesday 7th 13:00', end: 'Tuesday 7th 13:00' },
+|   { start: 'Tuesday 7th 13:30', end: 'Tuesday 7th 13:30' },
+|   { start: 'Tuesday 7th 14:00', end: 'Tuesday 7th 14:00' },
+|   { start: 'Tuesday 7th 14:30', end: 'Tuesday 7th 14:30' },
+|   { start: 'Tuesday 7th 15:00', end: 'Tuesday 7th 15:00' },
+|   { start: 'Tuesday 7th 15:30', end: 'Tuesday 7th 15:30' },
+|   { start: 'Tuesday 7th 16:00', end: 'Tuesday 7th 16:00' }
+| ]
+| send mail 
+| min ==> 14
+| hours ==>  11
+| date ==>  24
+| month ==>  8
+| removed events :: null
+| email successfully sent to  [ 'shharinala101@gmail.com' ]

@@ -1,0 +1,12 @@
+{
+  "name": "mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev" : "ts-node-dev --watch src --no-notify --respawn --transpile-only --exit-child -- src/server.ts"
+  },
+  "author": "",
+  "license": "ISC"
+}

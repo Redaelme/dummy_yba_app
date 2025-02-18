@@ -1,0 +1,47 @@
+---
+- name: 'Deploy to {{ env }} environment'
+  hosts: '{{ env }}'
+  vars_files:
+    - 'vars/default.yml'
+
+  tasks:
+    - name: include vars
+      include_vars: 'vars/{{ env }}.yml'
+
+    # deployment
+    - name: ensure that the repository exist
+      file:
+        path: '{{ project_path }}'
+        state: directory
+
+    - name: ensure that ".env" exist
+      file:
+        path: '{{ project_path }}/.env'
+        state: touch
+
+    - name: copy docker-compose to server
+      copy:
+        dest: '{{ project_path }}/docker-compose.yml'
+        src: '../{{ docker_compose_file }}'
+
+    - name: adjust image for prod
+      shell: 'sed -i "s/CI_COMMIT_SHA/{{ ci_commit_sha }}/g" docker-compose.yml'
+      args:
+        chdir: '{{ project_path }}'
+      when: (env == "prod")
+
+    - name: pull docker-compose service images
+      shell: docker-compose pull
+      args:
+        chdir: '{{ project_path }}'
+      changed_when: "'... pull complete' in result.stderr | default('')"
+
+    #- name: run docker-compose
+    #  docker_compose:
+    #    project_src: '{{ project_path }}'
+    #    build: no #this required python modules for docker
+
+    - name: run docker-compose
+      shell: docker-compose up -d
+      args:
+        chdir: '{{ project_path }}'

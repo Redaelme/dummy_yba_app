@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="d-flex flex-column align-items-center">
+
+<head>
+    <title>Proposed Time Slots</title>
+
+    <style>
+        body, td, div, h1, p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            color: #5c6360;
+        }
+    .greenText {
+        color: #3c7548;
+            font-size: medium;
+            font-weight: bold;
+  line-height: 1;
+    }
+
+        .header-table {
+            width: 100%;
+            max-width: 602px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            text-align: left;
+/*             margin: 0 auto; */
+        }
+
+        @media screen and (max-width: 400px) {
+            .header-table {
+                width: 100%;
+                padding: 0 15px;
+            }
+        }
+
+        .content {
+            padding: 2px;
+        }
+
+        .title {
+            margin: 0 7px 0 0;
+            color: #5c6360;
+            font-size: 14px;
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+
+        .textPlain {
+            margin: 0 0 2px 0;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .hourlyCrennals {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hourlyCrennals li {
+            margin-bottom: 5px;
+        }
+
+        .button {
+            display: block;
+            padding: 15px 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: medium;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+
+        .fullButton {
+            background-color: #3c7548;
+            color: #fff !important;
+        }
+
+        .outlinedButton {
+            background-color: #ffffff;
+            color: #3c7548 !important;
+            border: 1px solid #3c7548;
+        }
+
+        .btnlink {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .emailFooter {
+            padding: 14px 2px;
+            text-align: left;
+/*             background-color: #f9f9f9; */
+/*             display: flex; */
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .emailFooter a {
+            text-decoration: none;
+            color: #45818e;
+            font-weight: bold;
+/*             display: flex; */
+            align-items: center;
+        }
+
+/*         .emailFooter img { */
+/*             margin-left: 5px; */
+/*         } */
+
+    </style>
+</head>
+
+<body>
+<table role="presentation" class="header-table">
+    <tr>
+        <td class="content">
+            <!-- Template content goes here -->
+            {{{body}}}
+        </td>
+    </tr>
+
+    <tr>
+        <td class="emailFooter">
+            <a href="https://www.yesbossassistant.com/download-now" target="_blank">
+                <p>Yesboss Assistant, AI-PA for {{firstname}}</p>
+                <img src="{{COLORED_LOGO}}" width="27">
+            </a>
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>
